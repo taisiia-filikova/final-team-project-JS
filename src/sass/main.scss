@@ -1,0 +1,32 @@
+@import './utils/variables';
+@import './utils/basic-settings';
+@import './utils/breakpoints';
+@import './utils/placeholders';
+@import './utils/container';
+
+@import './utils/is-hidden';
+@import './utils/visually-hidden';
+
+// Header
+@import './common/page-header.scss';
+
+// One movie card
+@import './common/movie-card';
+
+// Modal movie card
+@import './common/modal-movie-card';
+
+//Paginator
+@import './common/paginator';
+
+// Footer
+@import './common/page-footer';
+
+// Movies
+@import './common/hbs-movies';
+
+// Spinner
+@import './common/spinner.scss';
+
+// Modal team
+@import './common/modal-team';

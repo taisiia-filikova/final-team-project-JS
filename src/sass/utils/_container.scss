@@ -1,0 +1,19 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (max-width: $tablet - 1px) {
+    max-width: 310px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 646px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 912px;
+  }
+}
+
+// Контеинер проверила 10500 раз. Просто добавляем класс и должны четко влезать на всех устройствах.
+// Считалось так (на примере десктопа):
+// брекпоинт 1024пх - 142пх (по 71пх слева и справа) + 30пх (по 15пх обязательных одинаковых паддинга слева и справа на всех устройствах)

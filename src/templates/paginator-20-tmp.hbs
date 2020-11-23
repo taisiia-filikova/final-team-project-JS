@@ -1,0 +1,8 @@
+<ul class="paginator paginator-list-pages">
+    {{#each range}}
+    <li class="item paginator-page {{#if this.active}} paginator-current{{/if}}">
+        <a class="paginator-page-link" data-page="{{this.num}}" data-url="{{this.prelink}}&page={{this.num}}"
+            href="{{this.prelink}}&page={{this.num}}">{{this.num}}</a>
+    </li>
+    {{/each}}
+</ul>

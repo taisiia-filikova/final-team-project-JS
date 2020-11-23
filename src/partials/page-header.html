@@ -1,0 +1,58 @@
+<header class="header">
+  <div class="header-background">
+    <div class="container">
+      <div class="header-box">
+        <a href="index.html" class="header-logo-box" id="logo">
+          <svg class="header-logo-svg" width="24px" height="24px">
+            <use href="./images/symbol-defs.svg#icon-film"></use>
+          </svg>
+          <h1 class="header-logo-heading">Filmoteka</h1>
+        </a>
+
+        <nav class="nav">
+          <div class="nav-home">
+            <a href="index.html" class="nav-link is-active" id="home">Home</a>
+          </div>
+          <div class="nav-library">
+            <a href="#" class="nav-link" id="library">My Library</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="home-search">
+        <form action="#" class="header-form" id="search">
+          <div class="header-form-box">
+            <input
+              class="header-form-input"
+              id="query"
+              type="text"
+              placeholder="Поиск фильмов"
+              autocomplete="off"
+              minlength="1"
+            />
+
+            <button class="header-form-button" type="submit">
+              <svg class="header-form-svg" width="14px" height="14px">
+                <use href="./images/symbol-defs.svg#icon-search"></use>
+              </svg>
+            </button>
+
+            <span class="header-form-after"></span>
+          </div>
+        </form>
+
+        <p class="search-error is-hidden" id="search-error">
+          Search result not successful. Enter the correct movie name and try
+          again.
+        </p>
+      </div>
+
+      <div class="librarry-filter">
+
+        <a href="#" class="library-button watched-link">Watched</a>
+
+        <a href="#" class="library-button queue-link">Queue</a>
+      </div>
+    </div>
+  </div>
+</header>

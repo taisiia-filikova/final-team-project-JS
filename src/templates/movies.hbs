@@ -1,0 +1,36 @@
+{{#each this}}
+<li class="movies-item" id="{{id}}">
+    <div class="poster">
+        {{#if poster_path}}
+        <img class="image" src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/{{poster_path}}" alt="{{title}}"
+            data-id="{{id}}" />
+        {{else}}
+        <img class="image"
+            src="http://i.piccy.info/i9/08d3b2fdf0c0f72070b26eb5c84de9f9/1606074167/25052/1406275/68511fake_img.jpg"
+            alt="{{title}}" data-id="{{id}}" />
+        {{/if}}
+    </div>
+
+    <div class="info">
+        <h3 class="info-title">{{title}}</h3>
+        {{!-- <ul class="info-container">
+            {{#each genre_ids}} <li class="info-list">{{name}}</li>{{/each}}
+            <li>&nbsp;|&nbsp;</li>
+            <li class="info-list">{{release_date}}</li>
+        </ul> --}}
+        <p class="info-container">
+            {{#each genre_ids}}
+            {{name}}{{/each}}
+            {{#each genres}}
+            {{name}}{{/each}}
+            &nbsp;|&nbsp;
+            {{release_date}}
+
+            {{#if imdb_id}}
+            <span class="movie-popularity">{{vote_average}}</span>
+            {{/if}}
+
+        <p>
+    </div>
+</li>
+{{/each}}

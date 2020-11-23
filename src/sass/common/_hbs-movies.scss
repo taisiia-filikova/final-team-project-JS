@@ -1,0 +1,64 @@
+.movies-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.movies-item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  width: 280px;
+  // overflow: hidden;
+  transition: $transition;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    @media screen and (max-width: $tablet - 1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+    width: 293px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+    width: 274px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
+}
+
+.poster {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.info-title {
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  text-transform: uppercase;
+  color: $primaryBlackColor;
+}
+
+.info-container {
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: $primaryOrangeColor;
+}

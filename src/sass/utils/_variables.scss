@@ -1,0 +1,16 @@
+$primaryWhiteColor: #ffffff;
+$primaryBlackColor: #000000;
+$primaryOrangeColor: #ff6b08;
+$buttonOrangeColor: #ff6b01;
+$footerBGColor: #f7f7f7;
+$footerGreyColor: #545454;
+$modalGreyColor: #8c8c8c;
+$errorRedColor: #ff001b;
+$modalOverlay: rgba(0, 0, 0, 0.8);
+$modalBlur: blur(20px);
+
+$transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transmition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
+$shadowDark: rgba(0, 0, 0, 0.1) 1px 1px 5px, rgba(0, 0, 0, 0.1) -1px -1px 5px,
+  rgba(0, 0, 0, 0.1) -1px 1px 5px, rgba(0, 0, 0, 0.1) 1px -1px 5px;

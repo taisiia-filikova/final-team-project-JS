@@ -1,0 +1,383 @@
+.header.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  max-width: 320px;
+
+  @media screen and (min-width: 320px) {
+    max-width: 767px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 1023px;
+
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 1024px;
+  height: 230px;
+
+  background-image: url('../images/home320_x1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 320px) {
+    background-image: url('../images/home768_x1.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/home1024_x1.jpg');
+  }
+
+  &-background {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 40px;
+    background-color: rgba($color: #000000, $alpha: 0.56);
+  }
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 37px;
+  }
+
+  &-logo-box {
+    display: flex;
+  }
+
+  &-logo-svg {
+    margin-right: 10px;
+  }
+
+  &-logo-heading {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    user-select: none;
+
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 0.9;
+    color: $primaryWhiteColor;
+
+    @media screen and (min-width: 480px) {
+      position: relative;
+      width: auto;
+      height: auto;
+      clip: auto;
+      user-select: auto;
+    }
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav-home {
+    margin-right: 40px;
+  }
+
+  .nav-link {
+    position: relative;
+
+    font-size: 12px;
+    line-height: 0.9;
+    text-transform: uppercase;
+
+    color: $primaryWhiteColor;
+    transition-property: color;
+    @extend %transition;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: $primaryOrangeColor;
+  }
+
+  .nav-link.is-active::after {
+    @extend %nav-after;
+  }
+
+  &-form {
+    margin-bottom: 22px;
+
+    display: flex;
+    justify-content: center;
+
+    &-box {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 280px;
+
+      @media screen and (min-width: 480px) {
+        width: 336px;
+      }
+    }
+
+    &-input {
+      width: 90%;
+
+      font-size: 16px;
+      color: $primaryWhiteColor;
+
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+
+    &-input::placeholder {
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      color: $primaryWhiteColor;
+    }
+
+    &-button {
+      padding: 0;
+      width: 20px;
+
+      display: flex;
+      justify-content: center;
+
+      border: none;
+      outline: none;
+      background-color: transparent;
+
+      transition-property: transform;
+      @extend %transition;
+    }
+
+    &-button:hover,
+    &-button:focus {
+      transform: scale(1.2);
+    }
+
+    &-after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $primaryWhiteColor;
+
+      transition-property: background-color;
+      @extend %transition;
+    }
+
+    &-input:focus ~ &-after {
+      background-color: $primaryOrangeColor;
+    }
+  }
+
+  .search-error {
+    font-size: 14px;
+    line-height: 1.1;
+
+    color: #ff001b;
+
+    @media screen and (min-width: 480px) {
+      text-align: center;
+    }
+  }
+
+  .librarry-filter {
+    display: none;
+  }
+}
+
+// ... my library ...
+
+.header.page-my-library {
+  background-image: url('../images/my-library320_x1.jpg');
+
+  @media screen and (min-width: 320px) {
+    background-image: url('../images/my-library768_x1.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/my-library1024_x1.jpg');
+  }
+
+  .home-search {
+    display: none;
+  }
+
+  .librarry-filter {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: 320px) {
+      justify-content: center;
+    }
+
+    & .link {
+      width: 130px;
+      height: 44px;
+
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 44px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $primaryWhiteColor;
+      background-color: transparent;
+
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      @media screen and (min-width: 480px) {
+        width: 136px;
+      }
+    }
+
+    & .link:hover,
+    & .link:focus {
+      border-color: $primaryOrangeColor;
+      transform: scale(1.1);
+    }
+
+    & .link.watched {
+      @media screen and(min-width: 320px) {
+        margin-right: 15px;
+      }
+    }
+
+    & .link.is-active {
+      border-color: transparent;
+      background-color: $primaryOrangeColor;
+
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+    }
+  }
+
+  .header-box {
+    margin-bottom: 45px;
+  }
+}
+
+// ... page details ...
+
+.header.page-details {
+  background-image: url('../images/Rectangle320_x1.jpg');
+  background-position: 75%;
+
+  @media screen and (min-width: 320px) {
+    background-image: url('../images/Rectangle1024_x1.jpg');
+  }
+
+  .home-search {
+    display: none;
+  }
+
+  .librarry-filter {
+    display: none;
+  }
+}
+
+// Главные кнопки библиотеки
+
+.library-button {
+  @extend %primaryButton;
+  padding: 15px 38px 13px 38px;
+  color: $primaryWhiteColor;
+  transition: background-color $transition;
+
+  &:hover,
+  &:focus {
+    color: $primaryOrangeColor;
+    border: 1px solid $primaryOrangeColor;
+  }
+}
+
+.watched-link {
+  margin-right: 15px;
+}
+
+.library-button-is-active {
+  background-color: $primaryOrangeColor;
+  border: none;
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+
+  &:hover,
+  &:focus {
+    color: $primaryBlackColor;
+  }
+}
+
+// Плашечка рейтинга в карточке одного фильма вкладки библиотека
+.movie-popularity {
+  display: inline-block;
+  margin-left: 10px;
+
+  width: 36px;
+  height: 16px;
+
+  text-align: center;
+  vertical-align: text-bottom;
+
+  color: $primaryWhiteColor;
+  background-color: $primaryOrangeColor;
+  border-radius: 5px;
+}
+
+// ....
+
+.to-beginning {
+  position: fixed;
+  right: 60px;
+  bottom: 30px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-color: rgba(30, 30, 30, 0.5);
+  background-image: url('../images/left.svg');
+  background-size: 70%;
+  background-position: 30%, 50%;
+  background-repeat: no-repeat;
+
+  box-shadow: -5px -5px 7px rgba(150, 150, 150, 0.3),
+    5px 5px 7px rgba(150, 150, 150, 0.3);
+
+  transform: rotate(90deg);
+
+  // opacity: 0;
+  // pointer-events: none;
+
+  transition: opacity, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.to-beginning.visible {
+  opacity: 1;
+  pointer-events: all;
+}

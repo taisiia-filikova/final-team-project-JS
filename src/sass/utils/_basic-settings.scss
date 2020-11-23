@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  background-color: $primaryWhiteColor;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+button {
+  user-select: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  min-height: calc(100vh - 230px - 70px);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

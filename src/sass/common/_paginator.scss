@@ -1,0 +1,92 @@
+.paginator-previous,
+.paginator-next {
+  background: $footerBGColor;
+  border-radius: 5px;
+}
+
+.paginator a {
+  text-decoration: none;
+  color: $primaryBlackColor;
+}
+
+.paginator-page,
+.paginator-previous,
+.paginator-next,
+.paginator-current,
+.paginator-low-left,
+.paginator-low-right,
+.arow-paginator,
+.paginator-page-link {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginator-list-pages {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 50px;
+    width: 646px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 46px;
+    width: 912px;
+  }
+}
+
+.paginator-current > a,
+.paginator-page:hover,
+.paginator-page-link:hover {
+  background: $primaryOrangeColor;
+  border-radius: 5px;
+  color: $primaryWhiteColor;
+}
+
+.paginator {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  color: $primaryBlackColor;
+}
+
+.paginator-low-left {
+  background-image: url('../images/arrow-left.svg');
+}
+.paginator-low-right {
+  background-image: url('../images/arrow-right.svg');
+}
+
+.paginator-low-left,
+.paginator-low-right {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $footerBGColor;
+  border-radius: 5px;
+  border: solid 1px transparent;
+  &:hover {
+    border: 1px solid $primaryBlackColor;
+  }
+}
+
+.paginator .item:not(:last-child) {
+  margin-right: 2px;
+}
+
+.js-pagination.invisible {
+  opacity: 0;
+}

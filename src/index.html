@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filmoteka</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./sass/main.scss" />
+
+<body>
+  <include src="./partials/page-header.html"></include>
+  <main id="section-movies">
+    <include src="./partials/main.html"></include>
+    <h3 class="no-results">Sorry, but this section is still empty:(</h3>
+    <include src="./partials/spinner.html"></include>
+    
+    <a href="#section-movies" class="to-beginning" id="to-beginning"></a>
+  </main>
+
+  <include src="./partials/page-footer.html"></include>
+  <include src="./partials/modal-command.html"></include>
+  <include src="./partials/modal.html"></include>
+  
+  <script src="./index.js" type="module"></script>
+
+  
+</body>
+
+</html>

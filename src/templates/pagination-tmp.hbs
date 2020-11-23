@@ -1,0 +1,20 @@
+<ul class="paginator paginator-list-pages">
+    <li class="item paginator-low-left {{#unless first}}visually-hidden {{/unless}}"
+        data-url="{{prelink}}&page={{previous}}" data-name="prev" data-prev="{{previous}}"></li>
+    <li class="{{#unless first}}visually-hidden {{/unless}}item paginator-page paginator-page-first"
+        data-url="{{prelink}}&page={{first}}" data-name="first">
+        {{first}}</li>
+    <li class="item paginator-page {{#unless first}}visually-hidden {{/unless}}" data-url="{{prelink}}">...</li>
+
+    {{#each range}}
+    <li class="item paginator-page {{#if this.active}} paginator-current{{/if}}">
+        <a class="paginator-page-link" data-page="{{this.num}}" data-url="{{this.prelink}}&page={{this.num}}"
+            href="#">{{this.num}}</a>
+    </li>
+    {{/each}}
+
+    <li class="item paginator-page">...</li>
+    <li class="item paginator-page" data-url="{{prelink}}&page={{last}}" data-name="last">{{last}}</li>
+    <li class="item paginator-low-right" data-url="{{prelink}}&page={{next}}" data-name="next" data-next="{{next}}">
+    </li>
+</ul>
