@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "parcel src/*.html --no-source-maps",
         "build": "parcel build src/*.html",
-        "predeploy": "npm run build -- --public-url /group-project-on-JS",
+        "predeploy": "npm run build -- --public-url /final-team-project-JS",
         "deploy": "gh-pages -d dist"
     },
     "repository": {
