@@ -43,4 +43,4 @@ const e=document.querySelector(".team-link"),o=document.querySelector(".js-open-
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/page-header.js"),require("./js/getPopular.js"),require("./js/paginator.js"),require("./js/searchMovies.js"),require("./js/switch-page.js"),require("./js/modal-movie-card.js"),require("./js/my-library.js"),require("./js/command-modal.js");
 },{"./sass/main.scss":"clu1","./js/page-header.js":"CWwk","./js/getPopular.js":"eD84","./js/paginator.js":"d4Ms","./js/searchMovies.js":"KyDk","./js/switch-page.js":"YsJ2","./js/modal-movie-card.js":"t63X","./js/my-library.js":"L1LD","./js/command-modal.js":"Wuc9"}]},{},["Focm"], null)
-//# sourceMappingURL=/group-project-on-JS/src.a21a3207.js.map
+//# sourceMappingURL=/final-team-project-JS/src.2a645b44.js.map
